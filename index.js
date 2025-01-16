@@ -2,6 +2,7 @@ const express = require("express");
 const app = express()
 app.use(express.json());
 
+const port = 8080;
 var cors = require('cors')
 app.use(cors())
 
@@ -46,7 +47,7 @@ app.get("/", (req, res) => {
   });
   
 
-app.listen(8080, async () => {
+app.listen(port, async () => {
   try {
     // const mongoose = require('mongoose');
     // require('dotenv').config();
@@ -57,7 +58,7 @@ app.listen(8080, async () => {
   } catch (error) {
     console.log(error);
   }
-
+    console.log(`server running on ${port} `) 
 });
 
 // mongodb+srv://nyvive:o5yPRr6p0cP78Tw5@cluster0.v6880.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
