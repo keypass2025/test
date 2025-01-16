@@ -6,7 +6,6 @@ const port = 8080;
 var cors = require('cors')
 app.use(cors())
 
-
 const connection = require("./connection");
 
 const UserModel = require('./userModel');
@@ -58,7 +57,7 @@ app.listen(port, async () => {
   } catch (error) {
     console.log(error);
   }
-    console.log(`server running on ${port} `) 
+
 });
 
 // mongodb+srv://nyvive:o5yPRr6p0cP78Tw5@cluster0.v6880.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
